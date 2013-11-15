@@ -1,0 +1,32 @@
+div.well.fuelux.wizard-example
+  div#MyWizard.wizard
+    ul.steps(style="margin-left: 0")
+      li.active(data-target="#step1")
+        span.badge.badge-info
+          |  1
+        |  Step 1
+        span.chevron
+
+      li(class="", data-target="#step2")
+        span.badge
+          |  2
+        |  Step 2
+        span.chevron
+
+        li(data-target="#step3")
+          span.badge
+            |  3
+          |  Step 3
+        span.chevron
+
+    div.actions
+      button.btn.btn-mini.btn-prev(type="button", disabled="disabled")
+        i.icon-arrow-left
+        | Prev
+      button.btn.btn-mini.btn-next(type="button", data-last="Finish")
+        |  Next
+        i.icon-arrow-right
+
+  div.step-content
+    div#step1.step-pane.active
+      |  This is step 1

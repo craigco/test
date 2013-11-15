@@ -1,0 +1,37 @@
+extends layout
+
+block body
+
+
+  .container      
+    div(ng-controller='AppCtrl')
+      .jumbotron
+        img.img-responsive(src="images/bang.on_500w.png" alt="bang.on" style="margin-left: auto;margin-right: auto")
+        div(style='text-align: center')
+          h3 The definitive helper app for Hong Kong
+
+    div(style='text-align: center')
+      button.btn.btn-facebook(onclick='loginWithFacebook();')
+        i.icon-facebook
+        | Sign in using Facebook
+    hr
+    div
+      | bang.on: v
+      span(app-version)
+
+  script.
+    function loginWithFacebook() {
+      alert("YES!")
+    }
+
+
+
+  script(src='js/lib/angular/angular.js')
+  script(src='js/app.js')
+  script(src='js/services.js')
+  script(src='js/controllers.js')
+  script(src='js/filters.js')
+  script(src='js/directives.js')
+  script(src='js/lib/jquery/jquery-2.0.3.min.js')
+  script(src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js")
+  script(src='fuelux/2.5.0/loader.min.js')
